@@ -36,7 +36,7 @@ for(var i=0; i<randomMovies.length; i++){
         };
 
     }
-    if (randomMovies.indexOf(userGuess) === -1){
+    if (randomMovies.indexOf(userGuess) == -1){
         wrongGuesses.push(userGuess);
         guessesLeft --;
         var wg = document.getElementById('wrong');
@@ -45,12 +45,12 @@ for(var i=0; i<randomMovies.length; i++){
     }
 
 
-    if(guessMovies === randomMovies) {
+    if(guessMovies == randomMovies) {
         alert("Congratulations, You Won!");
         wins++;
     
     }
-    
+
     if(guessesLeft===0) {
         alert("You lost, it's time for a movie night!");
     }
