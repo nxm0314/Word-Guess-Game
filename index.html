@@ -30,16 +30,16 @@ Wrong Guesses: <span id="wrong">
 </div>
 
 <script>
-    var movies =["frozen","chicken little","sleeping beauty","aladdin","101 dalmations","snow white","finding nemo","the little mermaid"];
-    var randomMovies = movies[Math.floor(Math.random() * 
-    movies.length)];
-    var guessMovies = [];
 
-    for (var i=0; i<randomMovies.length; i++){
-    guessMovies[i] = "-";
-    }
-    var el = document.getElementById('guessword');
-        el.innerHTML=guessMovies.join(" ");
+var movies =["chicken little","sleeping beauty","101 dalmations","snow white","finding nemo","the little mermaid"];
+var randomMovies = movies[Math.floor(Math.random() * movies.length)];
+var guessMovies = [];
+
+for (var i=0; i<randomMovies.length; i++){
+guessMovies[i] = "-";
+}
+var el = document.getElementById('guessword');
+    el.innerHTML=guessMovies.join(" ");
 
 
 var wrongGuesses = [];
@@ -48,59 +48,59 @@ var wrongGuesses = [];
 
 var guessesLeft = 15;
 var ele = document.getElementById('remaining');
-        ele.innerHTML=guessesLeft;
+    ele.innerHTML=guessesLeft;
 
 var wins = 0;
 var elem = document.getElementById('numwins');
-        elem.innerHTML=wins;
+    elem.innerHTML=wins;
 
 document.onkeyup = function(event) {
 
-    var userGuess = event.key;
+var userGuess = event.key;
 
-    // el.innerHTML=guessMovies.join(" ");
+// el.innerHTML=guessMovies.join(" ");
 
 
-    for(var i=0; i<randomMovies.length; i++){
+for(var i=0; i<randomMovies.length; i++){
 
-        if(randomMovies[i]===userGuess){
-            guessMovies[i]=userGuess;
-            }
+    if(randomMovies[i]===userGuess) {
+        guessMovies[i]=userGuess
+        };
     }
 
-    if (randomMovies.indexOf(userGuess) == -1){
-            wrongGuesses.push(userGuess);
-            guessesLeft --;
-            var wg = document.getElementById('wrong');
-            wg.innerHTML=wrongGuesses;
-            
-        }
 
+    if (randomMovies.indexOf(userGuess) === -1){
+        wrongGuesses.push(userGuess);
+        guessesLeft --;
+        var wg = document.getElementById('wrong');
+        wg.innerHTML=wrongGuesses;
 
-        if(guessMovies == randomMovies) {
-            alert("Congratulations, You Won!");
-            wins++;
-        }
-
-        if(guessesLeft===0){
-            alert("You lost, it's time for a movie night!");
-        }
-
-        var el = document.getElementById('guessword');
-        el.innerHTML=guessMovies.join(" ");
-
-        var ele = document.getElementById('remaining');
-        ele.innerHTML=guessesLeft;
-
+    }
+        
     
+
+
+    if(guessMovies === randomMovies) {
+        alert("Congratulations, You Won!");
+        wins++;
+     }
+
+    if(guessesLeft===0){
+        alert("You lost, it's time for a movie night!");
+    }
+
+    var el = document.getElementById('guessword');
+    el.innerHTML=guessMovies.join(" ");
+
+    var ele = document.getElementById('remaining');
+    ele.innerHTML=guessesLeft;
 }
+
 </script>
 
-   
 
 
+<script type="text/javascript" src="assts/javascript/game.js"></script>
 
-<script type="text/javascript" src="assts/javascript/game.js">
-</script>
 </body>
 </html>
