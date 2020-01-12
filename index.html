@@ -3,15 +3,17 @@
     <head>
     <title>Family Movies Hangman</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assts/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assts/css/style.css">
 </head>
 <body>
 
+
 <div class="header">
-    <h1>Movies</h1>
+    <h1>Family Movies</h1>
     <h3>Press any key to start</h3>
 </div>
+
 
 <div class="wordguess" id="guessword">
 </div>
@@ -28,10 +30,10 @@ Wrong Guesses: <span id="wrong">
 </div>
 
 <script>
-     var movies =["frozen","chicken little","sleeping beauty","aladdin","101 dalmations","snow white","finding nemo","the little mermaid"];
-var randomMovies = movies[Math.floor(Math.random() * 
-movies.length)];
-var guessMovies = [];
+    var movies =["frozen","chicken little","sleeping beauty","aladdin","101 dalmations","snow white","finding nemo","the little mermaid"];
+    var randomMovies = movies[Math.floor(Math.random() * 
+    movies.length)];
+    var guessMovies = [];
 
     for (var i=0; i<randomMovies.length; i++){
     guessMovies[i] = "-";
@@ -59,10 +61,10 @@ document.onkeyup = function(event) {
     // el.innerHTML=guessMovies.join(" ");
 
 
-    for(var j=0; j<randomMovies.length; j++){
+    for(var i=0; i<randomMovies.length; i++){
 
-        if(randomMovies[j]===userGuess){
-            guessMovies[j]=userGuess;
+        if(randomMovies[i]===userGuess){
+            guessMovies[i]=userGuess;
             }
     }
 
@@ -90,7 +92,7 @@ document.onkeyup = function(event) {
         var ele = document.getElementById('remaining');
         ele.innerHTML=guessesLeft;
 
-        console.log(randomMovies.length);
+    
 }
 </script>
 
@@ -98,7 +100,7 @@ document.onkeyup = function(event) {
 
 
 
-<script type="text/javascript" src="assets/javascript/game.js">
+<script type="text/javascript" src="assts/javascript/game.js">
 </script>
 </body>
 </html>
