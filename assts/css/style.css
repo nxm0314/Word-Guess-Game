@@ -1,6 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(250, 244, 244);
+    background-color: #4B0082;
     font-size: 50px;
     position: relative;
 
@@ -11,7 +11,3 @@ h1 {
     color: purple;
 }
 
-wrong guesses {
-    font-family: cursive;
-    color: blue;
-}
