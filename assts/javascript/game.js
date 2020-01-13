@@ -1,5 +1,5 @@
 
-var movies =["chicken little","sleeping beauty","101 dalmations","snow white","finding nemo","the little mermaid"];
+var movies =["chicken little","sleeping beauty","101 dalmations","snow white","finding nemo","the little mermaid","big hero 6"];
 var randomMovies = movies[Math.floor(Math.random() * movies.length)];
 var guessMovies = [];
 
@@ -14,7 +14,7 @@ var wrongGuesses = [];
 // var eleme = document.getElementById('wrong');
 //      eleme.innerHTML=wrongGuesses;
 
-var guessesLeft = 15;
+var guessesLeft = 10;
 var ele = document.getElementById('remaining');
     ele.innerHTML=guessesLeft;
 
@@ -39,15 +39,18 @@ for(var i=0; i<randomMovies.length; i++){
     if (randomMovies.indexOf(userGuess) == -1){
         wrongGuesses.push(userGuess);
         guessesLeft --;
-        var wg = document.getElementById('wrong');
-        wg.innerHTML=wrongGuesses;
+        var wrong = document.getElementById('wrong');
+        wrong.innerHTML=wrongGuesses;
         
     }
 
 
-    if(guessMovies == randomMovies) {
+    if (guessMovies == randomMovies) {
+        wins.push(userGuess);
+        guessesLeft --;
+        var wins = document.getElementById('numwins');
         alert("Congratulations, You Won!");
-        wins++;
+        numwins.innerHTML=numwins;
     
     }
 
