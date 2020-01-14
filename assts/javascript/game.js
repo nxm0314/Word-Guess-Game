@@ -29,7 +29,7 @@ var userGuess = event.key;
 // el.innerHTML=guessMovies.join(" ");
 
 
-for(var i=0; i<randomMovies.length; i++){
+for(var i=0; i <randomMovies.length; i++){
 
     if(randomMovies[i]===userGuess) {
         guessMovies[i]=userGuess
